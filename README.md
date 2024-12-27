@@ -46,41 +46,8 @@ Open **inference.ipynb** to interact with the API and classify PDFs by providing
 ## Core Functionality
 The FastAPI app implements a `/classify_pdf/` endpoint that accepts a PDF URL, extracts text, and classifies it into one of the four categories.
 
-### Key Functions
-
-#### `download_pdf(url: str)`
-- Downloads the PDF from the given URL and saves it to a temporary file.
-- Handles timeouts and request failures with appropriate error responses.
-- Ensures the temporary file is cleaned up after use.
-
-#### `extract_text_from_pdf(pdf_path: str)`
-- Reads the downloaded PDF and extracts text using **PyPDF2**.
-- Iterates through all pages to gather text content.
-- Deletes the temporary file once processing is complete.
-
-#### `classify_pdf(input_data: URLInput)`
-The API endpoint that handles the classification process:
-
-1. **Downloads the PDF** using the provided URL.
-2. **Extracts the text content**.
-3. **Passes the text** to the **MLService** class for prediction.
-4. **Returns the classification label**, confidence score, and success status.
-
----
-
-## MLService
-
-This service handles the classification logic:
-- The text is preprocessed and passed to a trained ML model for inference.
-- The model outputs the **predicted category** and **confidence scores**.
-
----
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 ## Contact
-For questions or suggestions, feel free to reach out at [santhoshrao95@example.com](mailto:santhoshrao95@example.com).
+For questions or suggestions, feel free to reach out at [santhoshrao95.2@gmail.com](mailto:santhoshrao95.2@example.com).
 
